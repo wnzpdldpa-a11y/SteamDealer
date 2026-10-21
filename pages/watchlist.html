@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>관심 게임 | Steam Dealer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body data-page="watchlist">
+    <header class="site" id="site-header"></header>
+    <main class="wrap">
+        <p class="eyebrow">Your Tracked Games</p>
+        <h1>관심 게임의 가격을<br><span>놓치지 않도록</span></h1>
+        <p class="lead">관심 목록에 저장한 게임을 모아보고 현재가 예시와 역대 최저가 예시를 비교해보세요.<br>이 브라우저에 저장되므로 다른 기기와 자동동기화되지는 않습니다.</p>
+        <div class="panel stats" id="stats"></div>
+        <h2 class="sec">나의 관심 게임</h2>
+        <p class="sub">관심 게임 저장 버튼으로 게임을 추가할 수 있습니다.</p>
+        <div class="grid" id="grid"></div>
+        <h2 class="sec">가성비 체크</h2>
+        <p class="sub">현재 가격과 예시 최저가의 차이를 확인하세요</p>
+        <div class="tbl">
+            <table>
+                <thead>
+                    <tr>
+                        <th>게임</th>
+                        <th>현재가 예시</th>
+                        <th>역대 최저가 예시</th>
+                        <th>가격 차이</th>
+                        <th>할인률</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody id="rows"></tbody>
+            </table>
+        </div>
+    </main>
+    <footer class="site" id="site-footer"></footer>
+    <script src="../js/app.js"></script>
+</body>
+
+</html>

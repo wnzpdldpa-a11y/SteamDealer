@@ -1,0 +1,583 @@
+:root {
+    --bg: #171a21;
+    --panel: #1b2838;
+    --line: #2c3e52;
+    --blue: #66c0f4;
+    --green: #4c6b22;
+    --mute: #6b7683
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0
+}
+
+body {
+    background: var(--bg);
+    color: #fff;
+    font: 400 16px/1.5 Inter, "Noto Sans KR", system-ui, sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+button,
+input,
+select {
+    font: inherit;
+    color: inherit
+}
+
+:focus-visible {
+    outline: 2px solid var(--blue);
+    outline-offset: 2px
+}
+
+.wrap {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px
+}
+
+header.site {
+    background: var(--panel);
+    border-bottom: 1px solid #111a26;
+    position: sticky;
+    top: 0;
+    z-index: 5
+}
+
+header .wrap {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    height: 72px
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.mark {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 25%, #2a6fa8, #0b1d3a 70%);
+    overflow: hidden;
+    flex: none
+}
+
+.mark img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block
+}
+
+nav {
+    display: flex;
+    gap: 44px
+}
+
+nav a {
+    font-size: 15px;
+    color: #cfd8e0
+}
+
+nav a.on,
+nav a:hover {
+    color: var(--blue)
+}
+
+main.wrap {
+    padding: 72px 24px 96px
+}
+
+.eyebrow {
+    color: var(--blue);
+    font-size: 13px;
+    margin-bottom: 24px
+}
+
+h1 {
+    font-size: 44px;
+    font-weight: 400;
+    line-height: 1.3
+}
+
+h1 span {
+    color: var(--blue)
+}
+
+.lead,
+.sub {
+    color: var(--mute)
+}
+
+.lead {
+    margin: 28px 0 36px
+}
+
+.sec {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 88px 0 8px
+}
+
+.sub {
+    margin-bottom: 28px
+}
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    padding: 32px
+}
+
+.radar h2 {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.35;
+    margin-top: 8px
+}
+
+.btns {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap
+}
+
+.btn,
+.chip,
+.small-btn {
+    border: 1px solid var(--line);
+    background: var(--bg);
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block
+}
+
+.btn {
+    padding: 16px 38px
+}
+
+.green,
+.chip.on {
+    background: var(--green);
+    border-color: #6f9a2e
+}
+
+.chips {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 24px
+}
+
+.chip {
+    padding: 8px 24px;
+    font-size: 15px
+}
+
+.filters {
+    display: flex;
+    gap: 28px;
+    margin-bottom: 48px
+}
+
+.filters input,
+.filters select {
+    background: transparent;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 18px 26px;
+    height: 64px
+}
+
+.filters input {
+    flex: 1;
+    min-width: 0
+}
+
+.filters select {
+    background: var(--bg);
+    width: 250px;
+    color: var(--mute)
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px
+}
+
+.card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    overflow: hidden
+}
+
+.thumb {
+    position: relative;
+    aspect-ratio: 3/2;
+    background: linear-gradient(135deg, #2a475e, #0e1a28);
+    display: grid;
+    place-items: end center;
+    padding: 12px
+}
+
+.thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover
+}
+
+.thumb b {
+    font-size: 14px;
+    color: #9fb3c8
+}
+
+.heart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 0;
+    background: #0009;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px
+}
+
+.heart.on {
+    color: #ff5a6e
+}
+
+.body {
+    padding: 14px 16px 16px
+}
+
+.body small {
+    font-size: 13px;
+    color: #cfd8e0
+}
+
+.body h3 {
+    font-weight: 500;
+    font-size: 18px
+}
+
+.pr {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    margin: 6px 0 14px
+}
+
+.pr strong {
+    font-size: 20px;
+    font-weight: 500
+}
+
+.pr s {
+    font-size: 12px
+}
+
+.pr span {
+    color: var(--mute)
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid var(--line);
+    padding-top: 14px
+}
+
+.row em {
+    font-style: normal;
+    color: var(--blue)
+}
+
+.acts {
+    display: flex;
+    gap: 28px;
+    margin-top: 20px
+}
+
+.lnk {
+    background: none;
+    border: 0;
+    cursor: pointer;
+    color: #fff
+}
+
+.lnk:hover {
+    color: var(--blue)
+}
+
+.more {
+    display: block;
+    margin: 20px 0 0 auto;
+    background: none;
+    border: 0;
+    cursor: pointer;
+    font-size: 13px
+}
+
+.empty {
+    color: var(--mute);
+    padding: 40px 0;
+    grid-column: 1/-1
+}
+
+.two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px
+}
+
+.two .panel {
+    padding: 20px 24px
+}
+
+.item {
+    display: flex;
+    gap: 32px;
+    align-items: center;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.item:last-child {
+    border: 0
+}
+
+.item>span {
+    min-width: 96px;
+    font-size: 13px;
+    color: #cfd8e0
+}
+
+.item b {
+    font-weight: 500;
+    font-size: 18px;
+    display: block
+}
+
+.item small {
+    color: var(--mute)
+}
+
+.date {
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    width: 80px;
+    padding: 8px 0;
+    text-align: center;
+    line-height: 1.3;
+    flex: none;
+    min-width: 0 !important
+}
+
+.date b {
+    font-size: 20px
+}
+
+.item .hi {
+    color: var(--blue)
+}
+
+.tbl {
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow-x: auto;
+    background: var(--bg)
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 760px
+}
+
+th {
+    background: var(--panel);
+    font-weight: 400;
+    text-align: left;
+    padding: 34px 24px
+}
+
+td {
+    padding: 34px 24px;
+    border-top: 1px solid var(--line)
+}
+
+.small-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    background: transparent
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px
+}
+
+.stats small {
+    color: var(--blue);
+    font-size: 13px
+}
+
+.stats p {
+    font-size: 44px;
+    line-height: 1.4;
+    margin-top: 8px
+}
+
+.seasons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 36px
+}
+
+.seasons small {
+    color: var(--blue);
+    font-size: 13px
+}
+
+.seasons h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 16px 0
+}
+
+.seasons p {
+    color: var(--mute)
+}
+
+.seasons em {
+    display: block;
+    font-style: normal;
+    color: var(--blue);
+    margin-top: 24px
+}
+
+.picked {
+    margin-top: 28px
+}
+
+footer.site {
+    border-top: 1px solid var(--line);
+    background: var(--panel);
+    margin-top: 40px
+}
+
+.foot {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr 1.4fr;
+    gap: 48px;
+    padding-top: 56px;
+    padding-bottom: 32px
+}
+
+.foot .brand {
+    font-size: 22px;
+    margin-bottom: 14px
+}
+
+.foot .mark {
+    width: 34px;
+    height: 34px
+}
+
+.foot p,
+.foot li a {
+    color: var(--mute);
+    font-size: 14px
+}
+
+.foot h4 {
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 14px
+}
+
+.foot ul {
+    list-style: none;
+    display: grid;
+    gap: 10px
+}
+
+.foot li a:hover {
+    color: var(--blue)
+}
+
+.copy {
+    border-top: 1px solid var(--line);
+    color: var(--mute);
+    font-size: 13px;
+    padding: 20px 24px
+}
+
+@media(max-width:860px) {
+    header .wrap {
+        gap: 20px;
+        height: auto;
+        padding: 12px 24px;
+        flex-wrap: wrap
+    }
+
+    nav {
+        gap: 20px;
+        flex-wrap: wrap
+    }
+
+    h1 {
+        font-size: 32px
+    }
+
+    .grid,
+    .two,
+    .seasons,
+    .foot {
+        grid-template-columns: 1fr
+    }
+
+    .stats {
+        grid-template-columns: 1fr 1fr
+    }
+
+    .stats p {
+        font-size: 30px
+    }
+
+    .filters {
+        flex-direction: column;
+        gap: 12px
+    }
+
+    .filters select {
+        width: 100%
+    }
+
+    .sec {
+        font-size: 26px;
+        margin-top: 64px
+    }
+}
